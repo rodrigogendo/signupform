@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utc-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0">
+
+    <title>Formulário de Cadastro</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="title">
+            <h1>Cadastro de Pessoas</h1>
+            <div class="menu">
+                <ul>
+                    <li><a href="">Página Inicial</a></li>
+                    <li><a href="">Painel de Controle</a></li>
+                    <li><a href="">Mais Informações</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <form action="cadastro.html" method="post">
+            <input name="country" type="hidden" value="Brazil">
+                <fieldset class="personaldata">
+                <legend>Dados Pessoais</legend>
+                <table>
+                    <tr>
+                    <td><label for="name">Nome</td>
+                    <td><input name="name" type="text" id="name" required/>
+                        </label>
+                        <td><label for="cpf">CPF</label></td>
+                            <td><input name="cpf"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                type = "number"
+                                maxlength = "11"
+                                placeholder="Sem pontos ou traços"
+                             />
+                            </td>
+                    </td>
+                    </tr>
+                    <tr>
+                    <td><label for="surname">Sobrenome</td>
+                        <td><input name="surname" type="text" id="surname" required/>
+                        </label></td>
+                        <td><label for="gender">Sexo</td>
+                            <td><select name="gender" id="gender" required>
+                                <option>-</option>
+                                <option>Feminino</option>
+                                <option>Masculino</option>
+                                <option>Prefiro não dizer</option>
+                            </select>
+                        </label></td>
+                    </tr>
+                    <tr>
+                    <td><label for="birthday">Data de Nascimento</td>
+                        <td><input name="birthday" type="date" id="birthday" min="1920-01-01" max="2022-01-01" required/>
+                        </label></td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset class="contactdata">
+            <legend>Dados de Contato</legend>
+                <table>
+                    <tr>
+                        <td><label for="email">Email
+                            <td><input name="email" type="email" id="email" required placeholder="exemplo@gmail.com"/></td>
+                        </label></td>
+                        <td><label for="cep">CEP
+                            <td><input name="cep"
+                                oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"
+                                type = "number"
+                                maxlength = "8"
+                                placeholder="Sem pontos ou traços"
+                             /></td>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="address">Endereço
+                            <td><input name="address" type="text" id="address" required/></td>
+                        </label></td>
+                        <td><label for="address2">Complemento
+                            <td><input name="address2" type="text" id="address2"/></td>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="neighbourhood">Bairro
+                            <td><input name="neighbourhood" type="text" id="neighbourhood" required/></td>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">Cidade
+                            <td><input name="city" type="text" id="city" required/></td>
+                        </label></td>
+                        <td><label for="province">Estado
+                            <td><input name="province" type="text" id="province" required/></td>
+                        </label></td>
+                    </tr>
+                    <tr>
+                        <td><label for="celphone">Celular
+                            <td><input name="celphone" type="number" id="celphone" required min="11"/></td>
+                        </label></td>
+                    </tr>
+                </table>
+
+            </fieldset>
+
+            <div class="terms">
+                <input name="terms" type="checkbox" id="terms" required/>
+                <label for="terms">Eu declaro que li e concordo com os <a href="" target="_blank">termos de contrato e serviço</a>.
+                </label>
+            </div>
+
+            <div class="button">
+                <input type="submit" name="submit" value="Cadastrar"/>
+            </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact">
+            <p>Para mais informações, dúvidas ou sugestões, 
+                entre em contato pelo número <quick style="font-weight: bold;"> (40) 5060-7000</quick>,
+                ou mande um email para <a href="mailto:cadastrodepessoas@cadastro.com">cadastrodepessoas@cadastro.com</a>.
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
